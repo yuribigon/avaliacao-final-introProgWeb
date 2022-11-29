@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Recados - Mural</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            width: 100%;
+            height: 100vh;            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(../img/bg.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form{
+            width: 90vw;
+            background-color: antiquewhite;
+            padding: 20px;
+            padding-top: 0;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+            margin-top: 5px;
+            font-size: 30px;
+        }
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        table, th, td {            
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table{
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <main>   
+        <div class="form">
+            
+            <h2>Meus recados</h2>
+            <button onclick="logoff()">Sair</button>
+        
+            <form>
+                <fieldset>
+                    <legend>Novo recado</legend>
+                    <p>
+                        Digite o recado e: <br>
+                        - Clique em Salvar para adicionar o novo recado à lista ou<br> 
+                        - Clique em Editar para sobrescrever o recado desejado
+                    </p>
+                    <label for="descricao"></label>
+                    <input size="50px" type="text" name="" id="descricao" placeholder="Descrição"><br>
+                    <label for="detalhes"></label>
+                    <input size="50px" type="text" name="" id="detalhes" placeholder="Detalhamento"><br>
+                    <button id="salvar" type="submit">Salvar</button>
+                </fieldset>
+            </form>
+            <br>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Descrição</th>
+                            <th>Detalhamento</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../js/recados.js"></script>
+</body>
+</html>

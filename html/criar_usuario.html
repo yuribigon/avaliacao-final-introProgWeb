@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Recados - Criar usuário</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            width: 100%;
+            height: 100vh;            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(../img/bg.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form{
+            background-color: antiquewhite;
+            padding: 20px;
+            padding-top: 0;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+        }
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="form">
+            <h2>Cadastrar usuário</h2>
+            <form>
+                <fieldset>
+                    <legend>CADASTRO</legend>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="" id="email">
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="" id="senha">
+                    <br>
+                    <label for="senhaVerificacao">Confirme sua senha</label>
+                    <input type="password" name="" id="senhaVerificada"><br>
+                    <button type="submit">Cadastrar</button>
+                    <br>
+                    <a href="./index.html">Já possui cadastro? Clique aqui</a>
+                </fieldset>
+            </form>            
+        </div>        
+    </main>
+
+    <script src="../js/criar_usuario.js"></script>
+</body>
+</html>
